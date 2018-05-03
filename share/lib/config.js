@@ -178,7 +178,6 @@ const CONFIG_DEFAULT = {
     'resize-handle': true
   },
   footer: {
-    display:none;
     rank: true,
     rdps: true,
     rhps: false,
