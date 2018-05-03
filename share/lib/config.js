@@ -188,6 +188,10 @@ const CONFIG_DEFAULT = {
  * CSS가 뭔지 모르시면 무시하셔도 되며, 자세한 구조는 소스 코드를
  * 직접 참조해주세요.
  * var()로 설정값 일부를 가져올 수 있습니다. */
+ 
+  footer: {
+    display: none;
+  }
 
 /* Write User-stylesheet here.
  * If you don't know what CSS is, you can ignore this section.
