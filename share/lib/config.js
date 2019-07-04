@@ -138,6 +138,7 @@ const CONFIG_DEFAULT = {
     pld: 'rgb(21, 28, 100)', // Indigo 900 (B -10%)
     war: 'rgb(153, 23, 23)', // Red 900 (B -10%)
     drk: 'rgb(136, 14, 79)', // Pink 900
+	gnb: 'rgb(78, 52, 46)', // Brown 800
     mnk: 'rgb(255, 152, 0)', // Orange 500
     drg: 'rgb(63, 81, 181)', // Indigo 500
     brd: 'rgb(158, 157, 36)', // Lime 800
@@ -146,6 +147,7 @@ const CONFIG_DEFAULT = {
     blm: 'rgb(126, 87, 194)', // Deep Purple 400
     mch: 'rgb(0, 151, 167)', // Cyan 700
     rdm: 'rgb(233, 30, 99)', // Pink 500
+	dnc: 'rgb(244, 143, 177)', // Pink 200
     sam: 'rgb(255, 202, 40)', // Amber 400
     whm: 'rgb(117, 117, 117)', // Gray 600
     sch: 'rgb(121, 134, 203)', // Indigo 300
