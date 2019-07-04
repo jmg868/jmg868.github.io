@@ -1,7 +1,8 @@
 'use strict'
 
-const VERSION = '0.7.22'
-const CODENAME = 'Never-Lost Word'
+const VERSION = '0.7.25'
+const CODENAME = 'Remind Blue'
+const DESCRIPTION = '\'君の歌った「大人が嫌いな歌」を\''
 
 const CONFIG_DEFAULT = {
   lang: 'ko',
