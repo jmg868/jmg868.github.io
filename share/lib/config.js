@@ -1,8 +1,7 @@
 'use strict'
 
-const VERSION = '0.7.25'
-const CODENAME = 'Remind Blue'
-const DESCRIPTION = '\'君の歌った「大人が嫌いな歌」を\''
+const VERSION = '0.7.22'
+const CODENAME = 'Never-Lost Word'
 
 const CONFIG_DEFAULT = {
   lang: 'ko',
@@ -10,7 +9,7 @@ const CONFIG_DEFAULT = {
     // body
     'resize-factor': 1,
     'body-margin': '0.25rem',
-    'body-font': "'Lato', 'Source Han Sans', 'Meiryo UI', '맑은 고딕', sans-serif",
+    'body-font': "'Roboto', 'Source Han Sans', 'Meiryo UI', '맑은 고딕', sans-serif",
     // header / ui
     'nav-opacity': 1,
     'nav-bg': 'rgba(31, 31, 31, 0.9)',
@@ -30,7 +29,7 @@ const CONFIG_DEFAULT = {
     'shadow-card': '0 0.05rem 0.25rem rgba(0, 0, 0, 0.5)',
     'shadow-text': '0 0 0.125em rgba(0, 0, 0, 1)',
     'font-size-small': '0.75rem',
-    'gauge-height': '10%',
+    'gauge-height': '100%',
     'graph-height': '1.5rem'
   },
   tabs: [
@@ -139,7 +138,6 @@ const CONFIG_DEFAULT = {
     pld: 'rgb(21, 28, 100)', // Indigo 900 (B -10%)
     war: 'rgb(153, 23, 23)', // Red 900 (B -10%)
     drk: 'rgb(136, 14, 79)', // Pink 900
-    gnb: 'rgb(78, 52, 46)', // Brown 800
     mnk: 'rgb(255, 152, 0)', // Orange 500
     drg: 'rgb(63, 81, 181)', // Indigo 500
     brd: 'rgb(158, 157, 36)', // Lime 800
@@ -148,8 +146,6 @@ const CONFIG_DEFAULT = {
     blm: 'rgb(126, 87, 194)', // Deep Purple 400
     mch: 'rgb(0, 151, 167)', // Cyan 700
     rdm: 'rgb(233, 30, 99)', // Pink 500
-    blu: 'rgb(0, 185, 247)', // Light Blue 500
-    dnc: 'rgb(244, 143, 177)', // Pink 200
     sam: 'rgb(255, 202, 40)', // Amber 400
     whm: 'rgb(117, 117, 117)', // Gray 600
     sch: 'rgb(121, 134, 203)', // Indigo 300
@@ -184,13 +180,15 @@ const CONFIG_DEFAULT = {
   footer: {
     rank: true,
     rdps: true,
-    rhps: false
+    rhps: false,
+    recover: false
   },
   custom_css: `
 /* 여기에 사용자 스타일시트를 작성합니다.
  * CSS가 뭔지 모르시면 무시하셔도 되며, 자세한 구조는 소스 코드를
  * 직접 참조해주세요.
  * var()로 설정값 일부를 가져올 수 있습니다. */
+
 
 /* Write User-stylesheet here.
  * If you don't know what CSS is, you can ignore this section.
@@ -199,12 +197,6 @@ const CONFIG_DEFAULT = {
 
 /* .gauge { -webkit-filter: blur(0.2rem); } */
 `
-}
-
-const MIGRATE_MAP = {
-  'color.gnb': { if: _ => !_, action: 'default' },
-  'color.blu': { if: _ => !_, action: 'default' },
-  'color.dnc': { if: _ => !_, action: 'default' }
 }
 
 const CONFIG_KEY_SHOULD_OVERRIDE = [
@@ -548,28 +540,6 @@ const COLUMN_INDEX = {
       }
 
       return this.config
-    }
-
-    migrate() {
-      if(!this.config) { return false }
-
-      Object.keys(MIGRATE_MAP).map(k => {
-        let v = this.get(k)
-        let cond = MIGRATE_MAP[k]
-        if(cond.if(v)) {
-          let result
-          if(typeof cond.action === 'function') {
-            result = cond.action(v)
-          } else {
-            switch(cond.action) {
-              case 'default':
-                result = resolveDotIndex(CONFIG_DEFAULT, k)
-                break
-            }
-          }
-          this.set(k, result)
-        }
-      })
     }
 
     init() {
