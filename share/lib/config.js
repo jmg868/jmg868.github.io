@@ -105,7 +105,7 @@ const CONFIG_DEFAULT = {
     '_deal-crit_direct': 2.5,
     '_deal-crittypes': 4,
     '_deal-max': 2.5,
-    '_deal-maxhit': 2,
+    '_deal-maxhit': 15,
     '_deal-maxskill': 5,
     '_deal-last10': 3.5,
     '_deal-last30': 3.5,
