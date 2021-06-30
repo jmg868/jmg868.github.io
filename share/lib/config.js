@@ -37,7 +37,7 @@ const CONFIG_DEFAULT = {
     {
       id: 0,
       label: 'DPS',
-      width: 5,
+      width: 1,
       sort: 'deal.total',
       col: [
         'i.icon',
@@ -105,7 +105,7 @@ const CONFIG_DEFAULT = {
     '_deal-crit_direct': 2.5,
     '_deal-crittypes': 4,
     '_deal-max': 2.5,
-    '_deal-maxhit': 7,
+    '_deal-maxhit': 2,
     '_deal-maxskill': 5,
     '_deal-last10': 3.5,
     '_deal-last30': 3.5,
