@@ -1,6 +1,6 @@
 'use strict'
 
-const VERSION = '0.7.25'
+const VERSION = '0.7.26'
 const CODENAME = 'Remind Blue'
 const DESCRIPTION = '\'君の歌った「大人が嫌いな歌」を\''
 
