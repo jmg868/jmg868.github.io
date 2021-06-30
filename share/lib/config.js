@@ -37,7 +37,7 @@ const CONFIG_DEFAULT = {
     {
       id: 0,
       label: 'DPS',
-      width: 1,
+      width: 5,
       sort: 'deal.total',
       col: [
         'i.icon',
