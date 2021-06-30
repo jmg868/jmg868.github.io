@@ -30,7 +30,7 @@ const CONFIG_DEFAULT = {
     'shadow-card': '0 0.05rem 0.25rem rgba(0, 0, 0, 0.5)',
     'shadow-text': '0 0 0.125em rgba(0, 0, 0, 1)',
     'font-size-small': '0.75rem',
-    'gauge-height': '10%',
+    'gauge-height': '50%',
     'graph-height': '1.5rem'
   },
   tabs: [
@@ -91,7 +91,7 @@ const CONFIG_DEFAULT = {
   colwidth: {
     '_i-class': 2,
     '_i-owner': 2.5,
-    '_i-name': 2.5,
+    '_i-name': 1,
     '_deal-total': 4.5,
     '_deal-per_second': 3.5,
     '_deal-pct': 2,
